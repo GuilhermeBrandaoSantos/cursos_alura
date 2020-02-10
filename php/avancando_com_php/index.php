@@ -48,34 +48,95 @@ ini_set('display_errors', 1);
 //     echo $contas_bancarias[$i]['titular'] .'<br>';    
 // }
 
+// $contas_bancarias = [
+//     43990464817 => [
+//         'titular' => 'Guilherme Brandão',
+//         'saldo' => 'R$ ' . 2000.00,
+//         'cpf' => 43990464817
+//     ],
+//     45512365498 => [
+//         'titular' => 'Satialis Anjo',
+//         'saldo' => 'R$ ' . 4500.00,
+//         'cpf' => 45512365498
+//     ],
+//     45987565423 => [
+//         'titular' => 'Jhonny Rohr',
+//         'saldo' => 'R$ ' . 3215.00,
+//         'cpf' => 45987565423
+//     ],
+//     45687564235 => [
+//         'titular' => 'Júnior',
+//         'saldo' => 'R$ ' . 20000.00,
+//         'cpf' => 45875642354
+//     ],
+//     45687423156 => [
+//         'titular' => 'Tatiana Guilger',
+//         'saldo' => 'R$ ' . 2521.05,
+//         'cpf' => 45742315648
+//     ]
+// ];
+
+// foreach ($contas_bancarias as $cpf => $contas) {
+//     echo $cpf . '<br>';
+// }
+
 $contas_bancarias = [
-    43990464817 => [
+    '43990464817' => [
         'titular' => 'Guilherme Brandão',
-        'saldo' => 'R$ ' . 2000.00,
+        'saldo' => 2000.00,
         'cpf' => 43990464817
     ],
-    45512365498 => [
+    '45512365498' => [
         'titular' => 'Satialis Anjo',
-        'saldo' => 'R$ ' . 4500.00,
+        'saldo' => 4500.00,
         'cpf' => 45512365498
     ],
-    45987565423 => [
+    '45987565423' => [
         'titular' => 'Jhonny Rohr',
-        'saldo' => 'R$ ' . 3215.00,
+        'saldo' => 3215.00,
         'cpf' => 45987565423
     ],
-    45687564235 => [
+    '45687564235' => [
         'titular' => 'Júnior',
-        'saldo' => 'R$ ' . 20000.00,
+        'saldo' => 20000.00,
         'cpf' => 45875642354
     ],
-    45687423156 => [
+    '45687423156' => [
         'titular' => 'Tatiana Guilger',
-        'saldo' => 'R$ ' . 2521.05,
+        'saldo' => 2521.05,
         'cpf' => 45742315648
     ]
 ];
 
-foreach ($contas_bancarias as $cpf => $contas) {
-    echo $cpf . '<br>';
+function exibe_mensagem($mensagem){
+    echo $mensagem . '<br>';
 }
+
+function saque($conta_cliente, $valor_saque){
+    
+    if ($valor_saque > $conta_cliente['saldo']) {
+       echo 'Valor do saque é maior que seu saldo. Saque não autorizado!!!';
+    }else {
+        echo 'Saldo anterior: ' . $conta_cliente['saldo'] . '<br>';
+        $conta_cliente['saldo'] -= $valor_saque;
+        echo 'Saldo atual: ' . $conta_cliente['saldo'].'<br>';
+    }
+
+    return $conta_cliente;
+}
+
+function deposito($conta_cliente, $valor_saque){
+    
+    echo 'Saldo anterior: ' . $conta_cliente['saldo'] . '<br>';
+    $conta_cliente['saldo'] += $valor_saque;
+    echo 'Saldo atual: ' . $conta_cliente['saldo'] .'<br>';
+    
+    
+}
+
+saque($contas_bancarias['43990464817'], 500);
+
+foreach ($contas_bancarias as $cpf => $contas) {
+    exibe_mensagem('CPF:' . $cpf .' => Titular:'. $contas['titular'] . ' => Saldo: '. $contas['saldo']);
+}
+// deposito($contas_bancarias['43990464817'], 500);
