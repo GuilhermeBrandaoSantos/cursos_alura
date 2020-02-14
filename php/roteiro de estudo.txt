@@ -1,0 +1,7 @@
+- Orientação a objetos
+- Melhores práticas
+- Console
+- Padrões de projeto
+- PSR do PHP
+- Composer
+- PHP Moderno: Novos Recursos e Boas Práticas
