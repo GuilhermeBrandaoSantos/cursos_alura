@@ -1,0 +1,6 @@
+Formações
+
+-Desenvolvedor PHP (Todos)
+-Front-end (front end, react, angular, vue.js)
+-Marketing Digital (SEO)
+-Data Science (Data Science, Machine Learning, Excel VBA)
