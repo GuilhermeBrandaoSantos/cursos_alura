@@ -12,6 +12,6 @@ $primeria_conta->depositar(500);
 // $segunda_conta->sacar(100);
 // $segunda_conta->depositar(1000);
 
-
+echo '<br><br><br><br>'.Conta::numero_contas();
 
 var_dump($primeria_conta, $segunda_conta);

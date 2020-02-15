@@ -5,16 +5,21 @@
 
         private $cpf;
         private $nome_titular;
-        private $saldo = 0;
+        private $saldo;
+        private static $numero_contas = 0;
 
         /************ Métodos públicos ************/
 
         public function __construct(string $cpf_cliente, string $nome_titular_novo)
         {
             $this->cpf = $cpf_cliente;
+
             $this->validaNome($nome_titular_novo);
             $this->nome_titular = $nome_titular_novo;
+            
             $this->saldo = 0;
+            
+            self::$numero_contas ++;
         }    
 
         public function sacar(float $valor_sacar)
@@ -67,6 +72,13 @@
                 echo 'Nome inválido. O nome precisa conter no mínimo 5 caracteres'; 
                 exit();
             }
+        }
+
+        /************ Métodos estáticos ************/
+
+        public static function numero_contas(): int
+        {
+            return self::$numero_contas ++ ;
         }
 
     }
