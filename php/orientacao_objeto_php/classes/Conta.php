@@ -10,6 +10,7 @@
 
         /************ Métodos públicos ************/
 
+        //Contruct
         public function __construct(string $cpf_cliente, string $nome_titular_novo)
         {
             $this->cpf = $cpf_cliente;
@@ -20,7 +21,13 @@
             $this->saldo = 0;
             
             self::$numero_contas ++;
-        }    
+        }
+        
+        //Desctruct (Remove da memoria quando a instância deixa de existir na memória)
+        public function __destruct()
+        {
+            self::$numero_contas --;   
+        }
 
         public function sacar(float $valor_sacar)
         {
