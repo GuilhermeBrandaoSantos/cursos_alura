@@ -6,12 +6,13 @@ class Conta
     private $nome_titular;
     private $saldo = 0;
 
-    public function novo_cliente(string $cpf_cliente, string $nome_titular_novo, float $saldo = 0)
+
+    public function __construct(string $cpf_cliente, string $nome_titular_novo)
     {
         $this->cpf = $cpf_cliente;
         $this->nome_titular = $nome_titular_novo;
-        $this->saldo;
-    }
+        $this->saldo = 0;
+    }    
 
     public function sacar(float $valor_sacar)
     {

@@ -3,18 +3,14 @@ ini_set('display_errors',1);
 
 require '../classes/Conta.php';
 
-$primeria_conta = new Conta();
-$segunda_conta = new Conta();
-
-$primeria_conta->novo_cliente('439.904.648-17', 'Guilherme Brandão');
-$segunda_conta->novo_cliente('109.876.543-21', 'Satialis Anjo');
-
+$primeria_conta = new Conta('439.904.648-17', 'Guilherme Brandão');
+$segunda_conta = new Conta('109.876.543-21', 'Satialis Anjo');
 
 // $primeria_conta->sacar(500);
 $primeria_conta->depositar(500);
 
 // $segunda_conta->sacar(100);
-$segunda_conta->depositar(1000);
+// $segunda_conta->depositar(1000);
 
 
 
