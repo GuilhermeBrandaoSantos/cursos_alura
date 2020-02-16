@@ -3,7 +3,6 @@
     {
         /************ Atributos ************/
 
-        private $cpf;
         private $nome_titular;
         private $saldo;
         private static $numero_contas = 0;
@@ -11,15 +10,10 @@
         /************ Métodos públicos ************/
 
         //Contruct
-        public function __construct(string $cpf_cliente, string $nome_titular_novo)
+        public function __construct(Titular $nome_titular)
         {
-            $this->cpf = $cpf_cliente;
-
-            $this->validaNome($nome_titular_novo);
-            $this->nome_titular = $nome_titular_novo;
-            
-            $this->saldo = 0;
-            
+            $this->nome_titular = $nome_titular;  
+            $this->saldo = 0;            
             self::$numero_contas ++;
         }
         
@@ -39,7 +33,7 @@
             }
             
             $this->saldo -= $valor_sacar;
-            echo '<br><b>'.$this->nome_titular.'</b><br>' .'Seu saldo autal é de R$' . $this->saldo;
+            // echo '<br><b>'.$this->nome_titular.'</b><br>' .'Seu saldo autal é de R$' . $this->saldo;
                         
         }
 
@@ -53,7 +47,7 @@
             } 
             
             $this->saldo += $valor_depositar;
-            echo '<br><b>'.$this->nome_titular.'</b><br>' .'Seu saldo autal é de R$' . $this->saldo;
+            // echo '<br><b>'.$this->nome_titular.'</b><br>' .'Seu saldo autal é de R$' . $this->saldo;
             
         }
 
@@ -69,16 +63,6 @@
             $this->sacar($valor_transferir);
             $conta_tranferir->depositar($valor_transferir);
 
-        }
-
-        /************ Métodos privados ************/
-
-        private function validaNome($nome_titular)
-        {
-            if (strlen($nome_titular) < 5) {
-                echo 'Nome inválido. O nome precisa conter no mínimo 5 caracteres'; 
-                exit();
-            }
         }
 
         /************ Métodos estáticos ************/
