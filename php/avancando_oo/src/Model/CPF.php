@@ -1,6 +1,6 @@
 <?php
 
-    namespace Modelo;
+    namespace Cursos_alura\POO\Model;
 
     class CPF
     {

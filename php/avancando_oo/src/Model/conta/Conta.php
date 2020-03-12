@@ -1,6 +1,6 @@
 <?php
 
-    namespace Modelo\Conta;
+    namespace Cursos_alura\POO\Model\Conta;
 
     class Conta
     {

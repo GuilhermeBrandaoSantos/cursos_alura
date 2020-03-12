@@ -1,8 +1,13 @@
 <?php
 
-    namespace Modelo\Conta;
+    namespace Cursos_alura\POO\Model\Conta;
 
-    class Titular
+use Cursos_alura\POO\Model\CPF;
+
+// use Curso_alura\POO\Model\CPF;
+
+
+    class Titular 
     {
         private $cpf;
         private $nome;
