@@ -22,8 +22,8 @@ class Titular extends Pessoa implements Autenticavel
         return $this->endereco;
     }
 
-    public function podeAutenticar(string $senha)
+    public function podeAutenticar(string $senha): bool
     {
-        return $senha === 'abcd';   
+        return $senha === 'abcd';
     }
 }

@@ -11,7 +11,7 @@ class Gerente extends Funcionario implements Autenticavel
         return $this->recuperaSalario();
     }
 
-    public function podeAutenticar(string $senha)
+    public function podeAutenticar(string $senha): bool
     {
         return $senha === '4321';
     }
