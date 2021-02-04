@@ -9,10 +9,15 @@ $pdo = new PDO('sqlite:' . $databsePath);
 
 $student = new Student(
     null,
-    'Guilherme Brandão',
-    new \DateTimeImmutable('1996-04-04')
+    'Sati Anjo',
+    new \DateTimeImmutable('1993-05-23')
 );
 
-$sqlInsert = "INSERT INTO students (NAME, BIRTH_DATE) VALUES('{$student->name()}', '{$student->birthDate()->format('Y-m-d')}');";
+$insertStudentsQuery = "INSERT INTO students (NAME, BIRTH_DATE) VALUES(:name, :birth_date);";
+$insertStudents = $pdo->prepare($insertStudentsQuery);
+$insertStudents->bindValue(':name', $student->name());
+$insertStudents->bindValue(':birth_date', $student->birthDate()->format('Y-m-d'));
 
-var_dump($pdo->exec($sqlInsert));
+if ($insertStudents->execute()) {
+    echo 'Inserido com sucesso';
+}

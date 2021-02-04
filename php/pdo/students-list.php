@@ -7,6 +7,6 @@ $pdo = new PDO('sqlite:' . $databsePath);
 
 $getStudentsList = $pdo->query("SELECT * FROM students");
 
-$studentsList = $getStudentsList->fetchAll();
+$studentsList = $getStudentsList->fetchAll(PDO::FETCH_ASSOC);
 
 var_dump($studentsList);
