@@ -22,7 +22,7 @@ class EntityManagerFactory
 
       $connection = [
          'dbname' => 'alura_doctrine',
-         'user' => 'user',
+         'user' => 'root',
          'password' => '',
          'host' => 'localhost',
          'driver' => 'pdo_mysql',

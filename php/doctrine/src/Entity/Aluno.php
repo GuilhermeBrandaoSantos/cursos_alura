@@ -9,14 +9,13 @@ class Aluno
 {
    /**
     * @Id
-    * @GenerateValue
-    * @Collumn (Type = "integer")
+    * @GeneratedValue
+    * @Column(type="integer")
     */
    private $id;
-
    /**
-    * @Collumn (Type = "string")
-    */
+     * @Column(type="string")
+     */
    private $nome;
 
    public function getId(): int
