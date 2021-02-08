@@ -17,7 +17,8 @@ class EntityManagerFactory
    {
       $rootDir = __DIR__ . '/../..';
       $config = Setup::createAnnotationMetadataConfiguration(
-         [$rootDir . '/src']
+         [$rootDir . '/src'],
+         true
       );
 
       $connection = [
