@@ -26,8 +26,7 @@ class EntityManagerFactory
          'user' => 'root',
          'password' => '',
          'host' => 'localhost',
-         'driver' => 'pdo_mysql',
-         'path' => $rootDir . '/var/data/banco.sql'
+         'driver' => 'pdo_mysql'
       ];
       return EntityManager::create($connection, $config);
    }

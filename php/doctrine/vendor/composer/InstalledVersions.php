@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'feed128c0afd4df8c2a42cdce8f0503b1f189d91',
+    'reference' => 'e7d2680093764908d394c4ab58a5228b3a54de63',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'feed128c0afd4df8c2a42cdce8f0503b1f189d91',
+      'reference' => 'e7d2680093764908d394c4ab58a5228b3a54de63',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -134,6 +134,15 @@ private static $installed = array (
       ),
       'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
     ),
+    'doctrine/migrations' => 
+    array (
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '260991be753a38aa25b6f2d13dbb7f113f8dbf8f',
+    ),
     'doctrine/orm' => 
     array (
       'pretty_version' => '2.8.1',
@@ -152,11 +161,54 @@ private static $installed = array (
       ),
       'reference' => '9899c16934053880876b920a3b8b02ed2337ac1d',
     ),
+    'friendsofphp/proxy-manager-lts' => 
+    array (
+      'pretty_version' => 'v1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '121af47c9aee9c03031bdeca3fac0540f59aa5c3',
+    ),
+    'laminas/laminas-code' => 
+    array (
+      'pretty_version' => '4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '28a6d70ea8b8bca687d7163300e611ae33baf82a',
+    ),
+    'laminas/laminas-eventmanager' => 
+    array (
+      'pretty_version' => '3.3.0',
+      'version' => '3.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1940ccf30e058b2fd66f5a9d696f1b5e0027b082',
+    ),
+    'laminas/laminas-zendframework-bridge' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
+    ),
     'ocramius/package-versions' => 
     array (
       'replaced' => 
       array (
         0 => '1.11.99',
+      ),
+    ),
+    'ocramius/proxy-manager' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '^2.1',
       ),
     ),
     'psr/container' => 
@@ -167,6 +219,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b7ce3b176482dbbc1245ebf52b181af44c2cf55f',
+    ),
+    'psr/log' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
     'psr/log-implementation' => 
     array (
@@ -183,6 +244,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '89d4b176d12a2946a1ae4e34906a025b7b6b135a',
+    ),
+    'symfony/filesystem' => 
+    array (
+      'pretty_version' => 'v5.2.3',
+      'version' => '5.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '262d033b57c73e8b59cd6e68a45c528318b15038',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -247,6 +317,15 @@ private static $installed = array (
       ),
       'reference' => 'd15da7ba4957ffb8f1747218be9e1a121fd298a1',
     ),
+    'symfony/stopwatch' => 
+    array (
+      'pretty_version' => 'v5.2.3',
+      'version' => '5.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b12274acfab9d9850c52583d136a24398cdf1a0c',
+    ),
     'symfony/string' => 
     array (
       'pretty_version' => 'v5.2.3',
@@ -255,6 +334,20 @@ private static $installed = array (
       array (
       ),
       'reference' => 'c95468897f408dd0aca2ff582074423dd0455122',
+    ),
+    'zendframework/zend-code' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '4.0.0',
+      ),
+    ),
+    'zendframework/zend-eventmanager' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '^3.2.1',
+      ),
     ),
   ),
 );
