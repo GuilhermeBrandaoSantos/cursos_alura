@@ -11,13 +11,17 @@ $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 $alunoRepository = $entityManager->getRepository(Aluno::class);
 
+$dql = "SELECT aluno FROM Alura\\Doctrine\Entity\Aluno aluno WHERE aluno.id=1 OR aluno.nome like 'Luna%'";
+$query = $entityManager->createQuery($dql);
+
+$alunosList = $query->getResult();
+
 //fazendo debug do que esta sendo executado
 $debugStack = new DebugStack();
 $entityManager->getConfiguration()->setSQLLogger($debugStack);
 
-$alunos = $alunoRepository->findAll();
 
-foreach ($alunos as $aluno) {
+foreach ($alunosList as $aluno) {
 
    $telefones = $aluno
       ->getTelefones()
@@ -37,5 +41,9 @@ foreach ($alunos as $aluno) {
    echo "\n";
 }
 
-print_r($debugStack);
+echo "\n";
+foreach ($debugStack->queries as $queryInfo) {
+   echo $queryInfo['sql'] . "\n";
+
+}
 
