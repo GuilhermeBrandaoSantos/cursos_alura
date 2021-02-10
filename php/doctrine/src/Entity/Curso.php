@@ -2,6 +2,8 @@
 
 namespace Alura\Doctrine\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @Entity
  */
@@ -19,6 +21,16 @@ class Curso
     */
    private $nome;
 
+   /**
+    * @ManyToMany (targetEntity="Aluno", inversedBy="cursos")
+    */
+   private $alunos;
+
+   public function __construct()
+   {
+      $this->alunos = new ArrayCollection();
+   } 
+
    public function getId(): int
    {
       return $this->id;
@@ -33,5 +45,20 @@ class Curso
    {
       $this->nome = $nome;
       return $this;
+   }
+
+   public function addAluno(Aluno $aluno): self
+   {
+      if ($this->alunos->contains($aluno)) {
+         return $this;
+      }
+      $this->alunos->add($aluno);
+      $aluno->addCurso($this);
+      return $this;
+   }
+
+   public function getAluno()
+   {
+      return $this->alunos;
    }
 }
