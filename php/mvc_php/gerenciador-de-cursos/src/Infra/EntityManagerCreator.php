@@ -12,12 +12,16 @@ class EntityManagerCreator
    {
       $paths = [__DIR__ . '/../Entity'];
       $isDevMode = false;
-      $dbParams = [
-         'dbname' => 'alura_mvc',
-         'user' => 'root',
-         'password' => '',
-         'host' => 'localhost',
-         'driver' => 'pdo_mysql'
+      // $dbParams = [
+      //    'dbname' => 'alura_mvc',
+      //    'user' => 'root',
+      //    'password' => '',
+      //    'host' => 'localhost',
+      //    'driver' => 'pdo_mysql'
+      // ];
+      $dbParams = [         
+         'driver' => 'pdo_sqlite',
+         'path' => __DIR__ . '/../../db.sqlite'
       ];
 
       $config = Setup::createAnnotationMetadataConfiguration(
