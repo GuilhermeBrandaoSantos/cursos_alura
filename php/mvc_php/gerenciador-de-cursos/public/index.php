@@ -1,13 +1,20 @@
 <?php
 
+   use Alura\Cursos\Controller\FormInsecao;
+   use Alura\Cursos\Controller\ListarCursos;
+
+   require __DIR__ . '/../vendor/autoload.php';
+
    switch ($_SERVER['PATH_INFO']) {
       case '/listar-cursos':
-         require 'listar-cursos.php';
+         $controlador = new ListarCursos();
+         $controlador->processaRequisicao();
          break;
       case '/novo-curso':
-         require 'form-novo-curso.php';
+         $controlador = new FormInsecao();
+         $controlador->processaRequisicao();
          break;      
       default:
          echo "Erro 404";
-         break;
+      break;
    }
