@@ -4,33 +4,10 @@
 namespace Alura\Cursos\Controller;
 
 
-class FormInsecao
+class FormInsecao implements InterfaceControladorRequisicao
 {
-   public function processaRequisicao()
+   public function processaRequisicao(): void
    {
-      ?>
-         <!DOCTYPE html>
-         <html lang="pt-BR">
-            <head>
-               <meta charset="UTF-8">
-               <title>Document</title>
-               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            </head>
-            <body>
-               <div class="container">
-                  <div class="jumbotron">
-                     <h1>Novo Curso</h1>
-                  </div>   
-
-                  <form action="" class="form-group">
-                     <label for="descricao">Descrição</label>
-                     <input type="text" name="descricao" id="descricao" class="form-control">
-
-                     <button type="submit" class="btn btn-primary mt-2">Salvar</button>
-                  </form>   
-               </div>
-            </body>
-         </html>
-      <?php
+      require __DIR__ . '../../../view/cursos/formulario-add-curso.php';
    }
 }
