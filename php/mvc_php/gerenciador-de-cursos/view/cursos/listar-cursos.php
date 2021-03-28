@@ -1,6 +1,4 @@
-<?php include __DIR__ . '../../inicio-html.php'; 
-   echo '<br>' . password_hash('123456', PASSWORD_ARGON2I). '<br>';
-?>
+<?php include __DIR__ . '../../inicio-html.php'; ?>
    
    <a href="/novo-curso" class="btn btn-primary mb-2">Novo Curso</a>
 

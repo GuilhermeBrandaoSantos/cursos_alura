@@ -33,6 +33,6 @@ class RealizaLogin implements InterfaceControladorRequisicao
          return;
       }
 
-      Header("Location: listar/cursos");
+      Header("Location: listar-cursos");
    }
 }
